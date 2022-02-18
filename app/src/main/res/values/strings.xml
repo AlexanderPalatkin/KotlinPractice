@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kotlin Practice</string>
+    <string name="text_main_text_view">Text field</string>
+    <string name="text_main_button">click me</string>
 </resources>
