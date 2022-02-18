@@ -10,12 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val mainTextView = findViewById<TextView>(R.id.main_text_view)
+        val firstMainTextView = findViewById<TextView>(R.id.first_main_text_view)
+        val secondMainTextView = findViewById<TextView>(R.id.second_main_text_view)
 
         val profile = Profile()
+        val newCopy = profile.copy(name = "Alex")
 
         findViewById<Button>(R.id.main_button).setOnClickListener {
-            mainTextView.text = "name: " + profile.name + " age: " + profile.age
+            firstMainTextView.text = "name: " + profile.name + " age: " + profile.age
+            secondMainTextView.text = "name: " + newCopy.name + " age: " + newCopy.age
         }
     }
 }
